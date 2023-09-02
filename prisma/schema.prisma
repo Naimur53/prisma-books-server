@@ -16,33 +16,34 @@ enum UserRole {
 }
 
 model User {
-  id              String            @id @default(uuid())
-  name            String
-  email           String            @unique
-  password        String
-  role            UserRole
-  contactNo       String
-  address         String
-  profileImg      String
-  ReviewAndRating ReviewAndRating[]
+  id               String            @id @default(uuid())
+  name             String
+  email            String            @unique
+  password         String
+  role             UserRole          @default(customer)
+  contactNo        String
+  address          String
+  profileImg       String
+  ReviewAndRatings ReviewAndRating[]
+  Order            Order[]
 }
 
 model Category {
   id    String @id @default(uuid())
   title String
-  Book  Book[]
+  Books Book[]
 }
 
 model Book {
-  id              String            @id @default(uuid())
-  title           String
-  author          String
-  price           Float
-  genre           String
-  publicationDate DateTime
-  categoryId      String
-  category        Category          @relation(fields: [categoryId], references: [id])
-  ReviewAndRating ReviewAndRating[]
+  id               String            @id @default(uuid())
+  title            String
+  author           String
+  price            Float
+  genre            String
+  publicationDate  DateTime
+  categoryId       String
+  category         Category          @relation(fields: [categoryId], references: [id])
+  ReviewAndRatings ReviewAndRating[]
 }
 
 model ReviewAndRating {
@@ -55,3 +56,25 @@ model ReviewAndRating {
   book   Book   @relation(fields: [bookId], references: [id])
 }
 
+enum OrderStatus {
+  pending
+  shipped
+  delivered
+}
+
+model Order {
+  id         String      @id @default(uuid())
+  userId     String
+  user       User        @relation(fields: [userId], references: [id])
+  createdAt  DateTime    @default(now())
+  status     OrderStatus @default(pending)
+  OrderBooks OrderBook[]
+}
+
+model OrderBook {
+  id       String @id @default(uuid())
+  orderId  String
+  order    Order  @relation(fields: [orderId], references: [id])
+  bookId   String
+  quantity Int
+}

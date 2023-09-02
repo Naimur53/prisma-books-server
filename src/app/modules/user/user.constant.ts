@@ -1,9 +1,2 @@
-
-        export const userSearchableFields = ['your key'];
-        export const userFilterAbleFields = [
-            'code',
-            'startMonth',
-            'endMonth',
-          ];
-          
-        
+export const userSearchableFields = [];
+export const userFilterAbleFields = [];

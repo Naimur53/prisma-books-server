@@ -9,6 +9,16 @@
             "date": 1693672048249,
             "name": "D:\\next level\\postgreSql\\prisma-books-server\\logs\\winston\\successes\\phu-2023-02-09-22-success.log",
             "hash": "21b3d34614bb715cbd72b164a72b7614dd9d6b8d6d82f95cb50b91c86882dfb5"
+        },
+        {
+            "date": 1693675148196,
+            "name": "D:\\next level\\postgreSql\\prisma-books-server\\logs\\winston\\successes\\phu-2023-02-09-23-success.log",
+            "hash": "2e370caf4d66c959988728a5ec9efd0d2c74ca3423bfaed7763d2ca5e179f4f9"
+        },
+        {
+            "date": 1693679536503,
+            "name": "D:\\next level\\postgreSql\\prisma-books-server\\logs\\winston\\successes\\phu-2023-03-09-00-success.log",
+            "hash": "2e8d4bbe60992a434e03f6087685791464b4f9aca3ddcd96b5a2b56f6fddecb1"
         }
     ],
     "hashType": "sha256"
