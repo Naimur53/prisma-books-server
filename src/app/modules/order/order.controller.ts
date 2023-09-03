@@ -48,7 +48,7 @@ const getSingleOrder: RequestHandler = catchAsync(
     sendResponse<Order>(res, {
       statusCode: httpStatus.OK,
       success: true,
-      message: 'Order retrieved  successfully!',
+      message: 'Order fetched  successfully!',
       data: result,
     });
   }
@@ -62,7 +62,7 @@ const getOrdersByUserId: RequestHandler = catchAsync(
     sendResponse<Order[]>(res, {
       statusCode: httpStatus.OK,
       success: true,
-      message: 'Orders retrieved  successfully!',
+      message: 'Orders fetched successfully!',
       data: result,
     });
   }
