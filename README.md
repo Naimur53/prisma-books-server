@@ -30,3 +30,9 @@ https://prisma-books-server.vercel.app/
 - `GET` https://prisma-books-server.vercel.app/api/v1/books/e665fc92-1d13-4f02-bdc6-5c116df771e3
 - `PATCH` https://prisma-books-server.vercel.app/api/v1/books/e665fc92-1d13-4f02-bdc6-5c116df771e3
 - `DELETE` https://prisma-books-server.vercel.app/api/v1/books/e665fc92-1d13-4f02-bdc6-5c116df771e3
+
+### Orders
+
+- `POST` https://prisma-books-server.vercel.app/api/v1/orders/create-order
+- `GET` https://prisma-books-server.vercel.app/api/v1/orders
+- `GET` https://prisma-books-server.vercel.app/api/v1/orders/6dc0385e-dd9a-4c90-b087-b6e5c939db33
