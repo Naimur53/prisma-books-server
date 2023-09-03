@@ -98,7 +98,7 @@ const deleteBook: RequestHandler = catchAsync(
     sendResponse<Book>(res, {
       statusCode: httpStatus.OK,
       success: true,
-      message: 'Book fetched  successfully!',
+      message: 'Book deleted  successfully!',
       data: result,
     });
   }
