@@ -9,7 +9,7 @@ router.post(
   AuthController.createUser
 );
 router.post(
-  '/login',
+  '/signin',
   validateRequest(AuthValidation.loginZodSchema),
   AuthController.loginUser
 );

@@ -43,7 +43,7 @@ const createUser = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, voi
         statusCode: http_status_1.default.OK,
         success: true,
         message: 'user created successfully!',
-        data: result,
+        data: result.user,
     });
 }));
 const loginUser = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
@@ -60,7 +60,8 @@ const loginUser = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void
         statusCode: 200,
         success: true,
         message: 'User lohggedin successfully !',
-        data: others,
+        data: undefined,
+        token: others.accessToken,
     });
 }));
 const refreshToken = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
