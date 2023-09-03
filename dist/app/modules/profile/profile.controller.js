@@ -19,11 +19,12 @@ const sendResponse_1 = __importDefault(require("../../../shared/sendResponse"));
 const user_service_1 = require("../user/user.service");
 const getProfile = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { userId } = req.user;
+    console.log(userId);
     const result = yield user_service_1.UserService.getSingleUser(userId);
     (0, sendResponse_1.default)(res, {
         statusCode: http_status_1.default.OK,
         success: true,
-        message: 'User retrieved  successfully!',
+        message: 'User retrieved  successfully',
         data: result,
     });
 }));

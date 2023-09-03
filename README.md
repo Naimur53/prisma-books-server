@@ -9,12 +9,18 @@ https://prisma-books-server.vercel.app/
 - `POST` https://prisma-books-server.vercel.app/api/v1/auth/signup
 - `POST` https://prisma-books-server.vercel.app/api/v1/auth/sigin
 - `GET` https://prisma-books-server.vercel.app/api/v1/users
-- `POST` https://prisma-books-server.vercel.app/api/v1/auth/refresh-token
+- `GET` https://prisma-books-server.vercel.app/api/v1/users/48c34655-4fef-42d4-aad1-9a4919f6858e
+- `PATCH` https://prisma-books-server.vercel.app/api/v1/users/48c34655-4fef-42d4-aad1-9a4919f6858e
+- `DELETE` https://prisma-books-server.vercel.app/api/v1/users/48c34655-4fef-42d4-aad1-9a4919f6858e
+- `GET` https://prisma-books-server.vercel.app/api/v1/profile
 
-### Auth (Admin)
+### Category
 
-- `POST` https://prisma-books-server.vercel.app/api/v1/admins/create-admin
-- `POST` https://prisma-books-server.vercel.app/api/v1/admins/login
+- `POST` https://prisma-books-server.vercel.app/api/v1/categories/create-category
+- `GET` https://prisma-books-server.vercel.app/api/v1/categories
+- `GET` https://prisma-books-server.vercel.app/api/v1/categories/9efa91b1-22a5-4250-acc5-a9e9f43a3717
+- `PATCH` https://prisma-books-server.vercel.app/api/v1/categories/9efa91b1-22a5-4250-acc5-a9e9f43a3717
+- `DELETE` https://prisma-books-server.vercel.app/api/v1/categories/9efa91b1-22a5-4250-acc5-a9e9f43a3717
 
 ### User
 
