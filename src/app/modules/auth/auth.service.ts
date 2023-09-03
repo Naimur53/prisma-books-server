@@ -22,22 +22,22 @@ const createUser = async (user: User): Promise<ILoginResponse> => {
       data: { password: genarateBycryptPass, ...rest },
     });
     // eslint-disable-next-line no-unused-vars
-    const { password, id, email, name } = newUser;
+    const { password, id, email, name, ...others } = newUser;
     //create access token & refresh token
     const accessToken = jwtHelpers.createToken(
-      { id, email, role: newUser.role },
+      { userId: id, role: newUser.role },
       config.jwt.secret as Secret,
       config.jwt.expires_in as string
     );
 
     const refreshToken = jwtHelpers.createToken(
-      { id, email, role: newUser.role },
+      { userId: id, role: newUser.role },
       config.jwt.refresh_secret as Secret,
       config.jwt.refresh_expires_in as string
     );
 
     return {
-      user: { email, id, name, role: newUser.role },
+      user: { email, id, name, ...others },
       accessToken,
       refreshToken,
     };
@@ -68,22 +68,22 @@ const loginUser = async (payload: ILogin): Promise<ILoginResponse> => {
 
   //create access token & refresh token
 
-  const { email, id, role, name } = isUserExist;
+  const { email, id, role, name, ...others } = isUserExist;
 
   const accessToken = jwtHelpers.createToken(
-    { id, email, role },
+    { userId: id, role },
     config.jwt.secret as Secret,
     config.jwt.expires_in as string
   );
 
   const refreshToken = jwtHelpers.createToken(
-    { id, email, role },
+    { userId: id, role },
     config.jwt.refresh_secret as Secret,
     config.jwt.refresh_expires_in as string
   );
 
   return {
-    user: { email, id, name, role },
+    user: { email, id, name, role, ...others },
     accessToken,
     refreshToken,
   };
@@ -113,8 +113,7 @@ const refreshToken = async (token: string): Promise<IRefreshTokenResponse> => {
 
   const newAccessToken = jwtHelpers.createToken(
     {
-      id: isUserExist.id,
-      email: isUserExist.email,
+      userId: isUserExist.id,
       role: isUserExist.role,
     },
     config.jwt.secret as Secret,

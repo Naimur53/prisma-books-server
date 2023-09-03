@@ -30,8 +30,8 @@ model User {
 
 model Category {
   id    String @id @default(uuid())
-  title String
-  Books Book[]
+  title String @unique
+  books Book[]
 }
 
 model Book {
@@ -68,7 +68,7 @@ model Order {
   user       User        @relation(fields: [userId], references: [id])
   createdAt  DateTime    @default(now())
   status     OrderStatus @default(pending)
-  OrderBooks OrderBook[]
+  orderBooks OrderBook[]
 }
 
 model OrderBook {

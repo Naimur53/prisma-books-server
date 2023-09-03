@@ -1,0 +1,31 @@
+Sun Sep 03 2023 2:8:3 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.category.create()` invocation in
+D:\next level\postgreSql\prisma-books-server\src\app\modules\category\category.service.ts:71:45
+
+  68 };
+  69 
+  70 const createCategory = async (payload: Category): Promise<Category | null> => {
+→ 71   const newCategory = await prisma.category.create(
+Unique constraint failed on the fields: (`title`)
+Sun Sep 03 2023 2:9:25 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ You are not authorized
+Sun Sep 03 2023 2:21:50 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.category.findUnique()` invocation in
+D:\next level\postgreSql\prisma-books-server\src\app\modules\category\category.service.ts:78:40
+
+  75 };
+  76 
+  77 const getSingleCategory = async (id: string): Promise<Category | null> => {
+→ 78   const result = await prisma.category.findUnique(
+Cannot select both '$scalars: true' and a specific scalar field 'Books'.
+Sun Sep 03 2023 2:24:20 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "title"
+    ],
+    "message": "title is required"
+  }
+]

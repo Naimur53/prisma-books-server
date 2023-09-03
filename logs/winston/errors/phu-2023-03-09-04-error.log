@@ -1,0 +1,9 @@
+Sun Sep 03 2023 4:23:15 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.book.findMany()` invocation in
+D:\next level\postgreSql\prisma-books-server\src\app\modules\book\book.service.ts:56:36
+
+  53 const whereConditions: Prisma.BookWhereInput =
+  54   andCondition.length > 0 ? { AND: andCondition } : {};
+  55 
+→ 56 const result = await prisma.book.findMany(
+Error in query graph construction: AssertionError("Invalid value for skip argument: Value can only be positive, found: -1")

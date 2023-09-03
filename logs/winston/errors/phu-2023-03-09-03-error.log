@@ -1,0 +1,43 @@
+Sun Sep 03 2023 3:5:10 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.category.findUnique()` invocation in
+D:\next level\postgreSql\prisma-books-server\src\app\modules\category\category.service.ts:78:40
+
+  75 };
+  76 
+  77 const getSingleCategory = async (id: string): Promise<Category | null> => {
+→ 78   const result = await prisma.category.findUnique({
+         where: {
+           id: undefined,
+       ?   title?: String,
+       ?   AND?: CategoryWhereInput | CategoryWhereInput[],
+       ?   OR?: CategoryWhereInput[],
+       ?   NOT?: CategoryWhereInput | CategoryWhereInput[],
+       ?   books?: BookListRelationFilter
+         },
+         include: {
+           books: true
+         }
+       })
+
+Argument `where` of type CategoryWhereUniqueInput needs at least one of `id` or `title` arguments. Available options are listed in green.
+Sun Sep 03 2023 3:5:53 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Invalid categoryId!
+Sun Sep 03 2023 3:6:32 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.book.create()` invocation in
+D:\next level\postgreSql\prisma-books-server\src\app\modules\book\book.service.ts:77:37
+
+  74 if (!data?.id) {
+  75   throw new ApiError(httpStatus.BAD_REQUEST, 'Invalid categoryId!');
+  76 }
+→ 77 const newBook = await prisma.book.create({
+       data: {
+         title: "The Catcher in the Rye",
+         author: "J.D. Salinger",
+         genre: "Fiction",
+         price: 350.75,
+         publicationDate: "1951-07-16",
+                          ~~~~~~~~~~~~
+         categoryId: "0c41e215-1ec9-45e1-946a-da5c13674039"
+       }
+     })
+
+Invalid value for argument `publicationDate`: premature end of input. Expected ISO-8601 DateTime.

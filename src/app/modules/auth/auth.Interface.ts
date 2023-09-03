@@ -9,6 +9,6 @@ export type ILogin = {
 };
 export type ILoginResponse = {
   accessToken: string;
-  user: Pick<User, 'id' | 'email' | 'name' | 'role'>;
+  user: Omit<User, 'password'>;
   refreshToken?: string;
 };
