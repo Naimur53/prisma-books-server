@@ -22,36 +22,11 @@ https://prisma-books-server.vercel.app/
 - `PATCH` https://prisma-books-server.vercel.app/api/v1/categories/9efa91b1-22a5-4250-acc5-a9e9f43a3717
 - `DELETE` https://prisma-books-server.vercel.app/api/v1/categories/9efa91b1-22a5-4250-acc5-a9e9f43a3717
 
-### User
+### Books
 
-- `GET` https://prisma-books-server.vercel.app/api/v1/users
-- `GET` https://prisma-books-server.vercel.app/api/v1/users/64a2a4ddebf5cff362b24b5a (Single GET)
-- `PATCH` https://prisma-books-server.vercel.app/api/v1/users/64a2a4ddebf5cff362b24b5a
-- `DELETE` https://prisma-books-server.vercel.app/api/v1/users/64a2a4ddebf5cff362b24b5a
-
-### Cows
-
-- `GET` https://prisma-books-server.vercel.app/api/v1/cows
-- `GET` https://prisma-books-server.vercel.app/api/v1/cows/64a2bb978deaaebde8fed26e
-- `PATCH` https://prisma-books-server.vercel.app/api/v1/cows/64a2bb978deaaebde8fed26e
-- `DELETE` https://prisma-books-server.vercel.app/api/v1/cows/64a2bb978deaaebde8fed26e
-
-### Orders
-
-- `POST` https://prisma-books-server.vercel.app/api/v1/orders two id ->({buyer:64a2a3ea9ab67ec922c3c67e,cow:64a2bbf17403d668efd85fb9})
-- `GET` https://prisma-books-server.vercel.app/api/v1/orders
-
-### Bonus Part
-
-### Admin
-
-- `POST` https://prisma-books-server.vercel.app/api/v1/admins/create-admin
-
-### My profile
-
-- `GET` https://prisma-books-server.vercel.app/api/v1/users/my-profile
-- `PATCH` https://prisma-books-server.vercel.app/api/v1/users/my-profile
-
-### Order
-
-- `GET` https://prisma-books-server.vercel.app/api/v1/orders/64a30849f22e510391a25754
+- `POST` https://prisma-books-server.vercel.app/api/v1/books/create-book
+- `GET` https://prisma-books-server.vercel.app/api/v1/books
+- `GET` https://prisma-books-server.vercel.app/api/v1/books/9efa91b1-22a5-4250-acc5-a9e9f43a3717/category
+- `GET` https://prisma-books-server.vercel.app/api/v1/books/e665fc92-1d13-4f02-bdc6-5c116df771e3
+- `PATCH` https://prisma-books-server.vercel.app/api/v1/books/e665fc92-1d13-4f02-bdc6-5c116df771e3
+- `DELETE` https://prisma-books-server.vercel.app/api/v1/books/e665fc92-1d13-4f02-bdc6-5c116df771e3
