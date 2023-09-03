@@ -14,7 +14,7 @@ const getProfile: RequestHandler = catchAsync(
     sendResponse<User>(res, {
       statusCode: httpStatus.OK,
       success: true,
-      message: 'User retrieved  successfully',
+      message: 'User fetched   successfully',
       data: result,
     });
   }
