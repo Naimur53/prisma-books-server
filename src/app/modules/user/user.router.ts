@@ -10,12 +10,6 @@ const router = express.Router();
 router.get('/', auth(UserRole.admin), UserController.getAllUser);
 router.get('/:id', auth(UserRole.admin), UserController.getSingleUser);
 
-// router.post(
-//   '/',
-//   validateRequest(UserValidation.createValidation),
-//   UserController.createUser
-// );
-
 router.patch(
   '/:id',
   auth(UserRole.admin),
