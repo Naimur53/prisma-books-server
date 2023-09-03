@@ -67,7 +67,7 @@ const getBooksByCategoryId: RequestHandler = catchAsync(
     sendResponse<Book[]>(res, {
       statusCode: httpStatus.OK,
       success: true,
-      message: 'Book retrieved  successfully!',
+      message: 'Book fetched   successfully!',
       meta: result.meta,
       data: result.data,
     });
@@ -84,7 +84,7 @@ const updateBook: RequestHandler = catchAsync(
     sendResponse<Book>(res, {
       statusCode: httpStatus.OK,
       success: true,
-      message: 'Book Updated successfully!',
+      message: 'Book fetched  successfully!',
       data: result,
     });
   }
